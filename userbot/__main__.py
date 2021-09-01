@@ -1,3 +1,4 @@
+import os
 import sys
 
 import userbot
@@ -21,6 +22,9 @@ print(userbot.__copyright__)
 print("Licensed under the terms of the " + userbot.__license__)
 
 cmdhr = Config.COMMAND_HAND_LER
+
+if os.environ.get("HOSTNAME") != "railway":
+    return LOGS.error("THIS REPO CAN ONLY BE USED ON RAILWAY")
 
 try:
     LOGS.info("Starting Userbot")
