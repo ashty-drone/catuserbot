@@ -42,7 +42,11 @@ Catcheck = CatCheck()
 
 async def startup_process():  
     if os.environ.get("HOSTNAME") != "railway":
-        return LOGS.error("THIS REPO CAN ONLY BE USED ON RAILWAY")
+        return LOGS.error(
+            "================================ERROR================================\n              " 
+            "THIS REPO CAN ONLY BE USED ON RAILWAY" 
+            "================================ERROR================================"
+        )
     check = await ipchange()
     if check is not None:
         Catcheck.sucess = False
