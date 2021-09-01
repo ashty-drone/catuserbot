@@ -23,9 +23,6 @@ print("Licensed under the terms of the " + userbot.__license__)
 
 cmdhr = Config.COMMAND_HAND_LER
 
-if os.environ.get("HOSTNAME") != "railway":
-    return LOGS.error("THIS REPO CAN ONLY BE USED ON RAILWAY")
-
 try:
     LOGS.info("Starting Userbot")
     catub.loop.run_until_complete(setup_bot())
@@ -43,7 +40,9 @@ class CatCheck:
 Catcheck = CatCheck()
 
 
-async def startup_process():
+async def startup_process():  
+    if os.environ.get("HOSTNAME") != "railway":
+        return LOGS.error("THIS REPO CAN ONLY BE USED ON RAILWAY")
     check = await ipchange()
     if check is not None:
         Catcheck.sucess = False
