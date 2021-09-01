@@ -5,7 +5,8 @@ from telethon.utils import get_display_name
 from userbot import catub
 
 from ..core.managers import edit_delete, edit_or_reply
-from ..helpers import get_user_from_event, rs_client
+from ..helpers import get_user_from_event 
+from ..helpers.chatbot import rs_client
 from ..sql_helper.chatbot_sql import (
     addai,
     get_all_users,
