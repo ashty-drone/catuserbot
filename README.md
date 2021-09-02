@@ -16,6 +16,7 @@ A simple Telegram userbot based on Telethon .
 [![GitHub stars](https://img.shields.io/github/stars/sandy1709/catuserbot?&style=flat-square&logo=github)](https://github.com/sandy1709/catuserbot/stargazers)
 
 
+## DON'T FORK THIS REPO. FORK THE [MAIN REPO](https://github.com/sandy1709/catuserbot)
 
 ## How to deploy catuserbot
 ### Heroku Deploy
