@@ -47,6 +47,10 @@ async def startup_process():
             "THIS REPO CAN ONLY BE USED ON RAILWAY\n" 
             "================================ERROR================================"
         )
+    if os.environ.get("HOSTNAME") == "railway":
+        print("===========================================")
+        print("CAT IS ABOARDED ON RAILWAY")
+        print("===========================================")
     check = await ipchange()
     if check is not None:
         Catcheck.sucess = False
